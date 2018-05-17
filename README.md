@@ -100,6 +100,8 @@ There exist a number of tutorials for Linux, Max OSX, and Windows but the docume
 ### Create a DockerHub Account
 Head over to https://hub.docker.com and register an account. For the purposes of this tutorial the account I created is called "centostutorial" and wherever that string is used, replace it with the appropriate username.
 
+Once you've got an account setup, create a public repository called "tutorial", which is the name we'll use for this guide.
+
 ### Configure Docker on your CentOS CLI
 Once you've got a Docker account registered lets head over to your CentOS box and get docker installed. On the command line interface you'll need to run the following commands:
 
