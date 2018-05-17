@@ -1,4 +1,4 @@
-# Docker CE
+# Docker CE - With Developer User Tutorial
 
 This repository hosts open source components of Docker CE products. The
 `master` branch serves to unify the upstream components on a regular
