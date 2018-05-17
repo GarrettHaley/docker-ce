@@ -98,6 +98,7 @@ branches.
 There exist a number of tutorials for Linux, Max OSX, and Windows but the documentation for CentOS specifically is lacking. The following tutorial will help you get aquainted with DockerHub, networks, and the client/server relationship between two containers.
 
 ### Create a DockerHub Account
+Head over to https://hub.docker.com and register an account. For the purposes of this tutorial the account I created is called "centostutorial" and wherever that string is used, replace it with the appropriate username.
 
 ### Configure Docker on your CentOS CLI
 
