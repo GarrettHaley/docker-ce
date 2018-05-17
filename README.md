@@ -118,10 +118,10 @@ Then, using the system control service start the docker process:
 And enable docker to run by default
 `sudo systemctl enable docker`
 
-And finally, add your username to the docker group
+And finally, add your username to the docker group\n
 `sudo usermod -aG docker <your centos username>`
 
-Reboot your machine and test that docker has successfully installed with the following:
+Reboot your machine and test that docker has successfully installed with the following:\n
 `docker run hello-world`
 
 ### Get Familiar with Alpine
