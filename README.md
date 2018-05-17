@@ -126,14 +126,30 @@ And finally, add your username to the docker group <br />
 Reboot your machine and test that docker has successfully installed with the following:<br />
 `docker run hello-world`
 
-### Get Familiar with Alpine
+### Login to your Docker Account
+Let's login to the docker account we just recently created. We'll need this later when we push our new docker images to the Hub.
+
+First, create a file that holds one line consisting of your password
+`echo "mypassword" > ~/.docker/creds`
+
+Double check that your DockerHub password is located in that file
+```
+cat ~/.docker/creds
+mypassword
+```
+
+Login to docker
+`docker login --username centostutorial --password-stdin < ~/.docker/creds`
+
+You are now logged in!
 
 ### Create the Server (Using Dockerfiles!)
+Next, let's build the docker image for the server using Dockerfiles and our repository.
 
 ### Create the Client (Using Dockerfiles!)
 
-### Clear your Workspace
+### Clearing and Cleaning your Workspace
 
-### Configure the network
+### Configuring the network
 
 ### Run your containers
