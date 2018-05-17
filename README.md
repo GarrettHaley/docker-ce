@@ -92,3 +92,23 @@ been merged, be sure to port the fix to the respective upstream git repo.
 There will be a git tag for each release candidate (RC) and general
 availablilty (GA) release. The tag will only point to commits on release
 branches.
+
+# Getting Started with Docker and CentOS
+
+There exist a number of tutorials for Linux, Max OSX, and Windows but the documentation for CentOS specifically is lacking. The following tutorial will help you get aquainted with DockerHub, networks, and the client/server relationship between two containers.
+
+### Create a DockerHub Account
+
+### Configure Docker on your CentOS CLI
+
+### Get Familiar with Alpine
+
+### Create the Server (Using Dockerfiles!)
+
+### Create the Client (Using Dockerfiles!)
+
+### Clear your Workspace
+
+### Configure the network
+
+### Run your containers
