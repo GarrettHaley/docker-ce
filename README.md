@@ -146,6 +146,44 @@ You are now logged in!<br />
 ### Create the Server (Using Dockerfiles!)
 Next, let's build the docker image for the server using Dockerfiles and our repository.
 
+Dockerfiles are a way to store setup scripts that can be used to build the same specific image over and over again. In your current directory create a new directory for the server configuration files:<br />
+`mkdir server`
+
+Change directories into `server`:<br />
+`cd server`
+
+Open up a new dockerfile for the server:<br />
+`vi Dockerfile`
+
+Add the following to the Dockerfile:<br />
+```
+# Dockerfile for CentOS Tutorial
+# Simple NodeJS Dockerfile Server
+FROM alpine:latest
+MAINTAINER John Doe <john@doe.com>
+
+# Install the NodeJS runtime
+RUN apk -U add nodejs
+
+# Copy the server JS file
+COPY server.js /srv/server.js
+
+# Copy the Dockerfile
+COPY Dockerfile /Dockerfile
+
+# Expose port 8080 for HTTP connections
+EXPOSE 8080
+
+# Run the following command by default
+CMD node /srv/server.js
+```
+
+Then add the server file
+
+Then build
+
+Then add it to dockerhub
+
 ### Create the Client (Using Dockerfiles!)
 
 ### Clearing and Cleaning your Workspace
