@@ -103,25 +103,25 @@ Head over to https://hub.docker.com and register an account. For the purposes of
 ### Configure Docker on your CentOS CLI
 Once you've got a Docker account registered lets head over to your CentOS box and get docker installed. On the command line interface you'll need to run the following commands:
 
-This command will install the yum-utils, device-mapper-persistent-data, and lvm2 packages. The `-y` flag indicates that we want `yum` to agree to and install any packages which ask the user `yes` or `no`.
+This command will install the yum-utils, device-mapper-persistent-data, and lvm2 packages. The `-y` flag indicates that we want `yum` to agree to and install any packages which ask the user `yes` or `no`.<br />
 `sudo yum install -y yum-utils device-mapper-persistent-data lvm2`
 
-Next, using the `yum-config-manager` we're going to add the docker community edition repo from Docker's website:
+Next, using the `yum-config-manager` we're going to add the docker community edition repo from Docker's website:<br />
 `sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`
 
-After adding the repo we want to install the docker community edition package:
+After adding the repo we want to install the docker community edition package:<br />
 `sudo yum install -y docker-ce`
 
-Then, using the system control service start the docker process:
+Then, using the system control service start the docker process:<br />
 `sudo systemctl start docker`
 
-And enable docker to run by default
+And enable docker to run by default<br />
 `sudo systemctl enable docker`
 
-And finally, add your username to the docker group\n
+And finally, add your username to the docker group <br />
 `sudo usermod -aG docker <your centos username>`
 
-Reboot your machine and test that docker has successfully installed with the following:\n
+Reboot your machine and test that docker has successfully installed with the following:<br />
 `docker run hello-world`
 
 ### Get Familiar with Alpine
