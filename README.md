@@ -103,9 +103,9 @@ Head over to https://hub.docker.com and register an account. For the purposes of
 Once you've got an account setup, create a public repository called "tutorial", which is the name we'll use for this guide.
 
 ### Configure Docker on your CentOS CLI
-Once you've got a Docker account registered lets head over to your CentOS box and get docker installed. On the command line interface you'll need to run the following commands:
+Once you've got a Docker account registered lets head over to your CentOS box and get docker installed. On the command line interface you'll need to run the following commands:<br />
 
-This command will install the yum-utils, device-mapper-persistent-data, and lvm2 packages. The `-y` flag indicates that we want `yum` to agree to and install any packages which ask the user `yes` or `no`.<br />
+This command will install the yum-utils, device-mapper-persistent-data, and lvm2 packages. The `-y` flag indicates that we want `yum` to agree to and install any packages which ask the user `yes` or `no`:<br />
 `sudo yum install -y yum-utils device-mapper-persistent-data lvm2`
 
 Next, using the `yum-config-manager` we're going to add the docker community edition repo from Docker's website:<br />
@@ -117,10 +117,10 @@ After adding the repo we want to install the docker community edition package:<b
 Then, using the system control service start the docker process:<br />
 `sudo systemctl start docker`
 
-And enable docker to run by default<br />
+And enable docker to run by default:<br />
 `sudo systemctl enable docker`
 
-And finally, add your username to the docker group <br />
+And finally, add your username to the docker group: <br />
 `sudo usermod -aG docker <your centos username>`
 
 Reboot your machine and test that docker has successfully installed with the following:<br />
@@ -129,19 +129,19 @@ Reboot your machine and test that docker has successfully installed with the fol
 ### Login to your Docker Account
 Let's login to the docker account we just recently created. We'll need this later when we push our new docker images to the Hub.
 
-First, create a file that holds one line consisting of your password
+First, create a file that holds one line consisting of your password:<br />
 `echo "mypassword" > ~/.docker/creds`
 
-Double check that your DockerHub password is located in that file
+Double check that your DockerHub password is located in that file:<br />
 ```
 cat ~/.docker/creds
 mypassword
 ```
 
-Login to docker
+Login to docker:<br />
 `docker login --username centostutorial --password-stdin < ~/.docker/creds`
 
-You are now logged in!
+You are now logged in!<br />
 
 ### Create the Server (Using Dockerfiles!)
 Next, let's build the docker image for the server using Dockerfiles and our repository.
