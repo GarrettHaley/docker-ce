@@ -268,8 +268,9 @@ Create a new network to host the server and client:<br />
 
 ### Run your containers
 Pull down and run the server:<br />
+`docker run --rm --name server --network net1 -d -p 8080:8080 centostutorial/tutorial:webserver`
 
 Pull down and run the client:<br />
-
+`docker run --name client --network net1 -it centostutorial/tutorial:webclient`
 
 Done!
