@@ -198,13 +198,35 @@ Close the server.js file by hitting esc and typing:<br />
 `:wq`
 
 Since we've got our server and Dockerfile setup, now lets build it!<br />
+`docker build -t centostutorial/tutorial:webserver .`
 
-Then add it to dockerhub
+Next we want to add it to our repository on DockerHub:<br />
+`docker push centostutorial/tutorial:webserver`
 
 ### Create the Client (Using Dockerfiles!)
+Next, lets build the docker image for the client using a Dockerfile and a basic bash script to poll the web server every few seconds for the webpage.<br />
+
+Create a new directory to hold the client files:<br />
+Change directories into the client directory: <br />
+Open a new Dockerfile:<br />
+Add the following to the Dockerfile:<br />
+Close and write the new contents to the Dockerfile:<br />
+In the same directory create the script:<br />
+Add the following to the script:<br />
+Save and close the script file:<br />
+Build the client image:<br />
+Push the client image to DockerHub:<br />
 
 ### Clearing and Cleaning your Workspace
+Clean your workspace:<br />
+Remove all docker processes:<br />
+Remove all docker images:<br />
 
 ### Configuring the network
+Create a new network:<br />
 
 ### Run your containers
+Pull down and run the server:<br />
+Pull down and run the client:<br />
+
+Done!
