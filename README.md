@@ -207,18 +207,61 @@ Next we want to add it to our repository on DockerHub:<br />
 Next, lets build the docker image for the client using a Dockerfile and a basic bash script to poll the web server every few seconds for the webpage.<br />
 
 Create a new directory to hold the client files:<br />
+`mkdir client`
+
 Change directories into the client directory: <br />
+`cd client`
+
 Open a new Dockerfile:<br />
+`vi Dockerfile`
+
 Add the following to the Dockerfile:<br />
-Close and write the new contents to the Dockerfile:<br />
+```
+# Dockerfile for Client
+FROM alpine:latest
+MAINTAINER John Doe <john@doe.com>
+
+RUN apk add --no-cache bash
+RUN apk -U add curl
+
+COPY script /script
+
+# Run this by default
+CMD bash /script
+```
+
+Hit esc and type the following to write the new contents to the Dockerfile:<br />
+`:wq`
+
 In the same directory create the script:<br />
+`vi script`
+
 Add the following to the script:<br />
-Save and close the script file:<br />
+```
+#!/usr/bin/env bash
+while :
+do
+  curl server:8080
+  sleep 10
+done
+```
+
+Hit esc and type the following to save and close the script file:<br />
+`:wq`
+
 Build the client image:<br />
+`docker build -t centostutorial/tutorial:webclient .`
+
 Push the client image to DockerHub:<br />
+`docker push centostutorial/tutorial:webclient`
 
 ### Clearing and Cleaning your Workspace
-Clean your workspace:<br />
+List any present docker images:<br />
+`docker images`
+
+Clean your workspace(remove the images):<br />
+
+
 Remove all docker processes:<br />
 Remove all docker images:<br />
 
