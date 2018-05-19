@@ -178,7 +178,7 @@ EXPOSE 8080
 CMD node /srv/server.js
 ```
 
-Close the Dockerfile by hitting <esc> and typing:<br />
+Close the Dockerfile by hitting esc and typing:<br />
 `:wq`
 
 Next we need to add the NodeJS server file to the same directory: <br />
@@ -194,7 +194,7 @@ http.createServer(function (request, response)
 }).listen(8080);
 ```
 
-Close the server.js file by hitting <esc> and typing:<br />
+Close the server.js file by hitting esc and typing:<br />
 `:wq`
 
 Since we've got our server and Dockerfile setup, now lets build it!<br />
