@@ -1,4 +1,4 @@
-# Docker CE - With CentOS Developer User Tutorial
+# Docker CE - CentOS Developer User Tutorial
 
 This repository hosts open source components of Docker CE products. The
 `master` branch serves to unify the upstream components on a regular
@@ -178,9 +178,26 @@ EXPOSE 8080
 CMD node /srv/server.js
 ```
 
-Then add the server file
+Close the Dockerfile by hitting <esc> and typing:<br />
+`:wq`
 
-Then build
+Next we need to add the NodeJS server file to the same directory: <br />
+`vi server.js`
+
+Add the following to the server.js file:<br />
+```
+var http = require('http');
+http.createServer(function (request, response)
+{
+  response.writeHead(200, {'Content-Type': 'text/plain'});
+  response.end('Welcome to your server!\n');
+}).listen(8080);
+```
+
+Close the server.js file by hitting <esc> and typing:<br />
+`:wq`
+
+Since we've got our server and Dockerfile setup, now lets build it!<br />
 
 Then add it to dockerhub
 
