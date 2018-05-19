@@ -259,17 +259,17 @@ Push the client image to DockerHub:<br />
 List any present docker images:<br />
 `docker images`
 
-Clean your workspace(remove the images):<br />
-
-
-Remove all docker processes:<br />
-Remove all docker images:<br />
+Clean your workspace and remove all docker images forcefully:<br />
+`docker images prune -a`
 
 ### Configuring the network
-Create a new network:<br />
+Create a new network to host the server and client:<br />
+`docker network create net1`
 
 ### Run your containers
 Pull down and run the server:<br />
+
 Pull down and run the client:<br />
+
 
 Done!
